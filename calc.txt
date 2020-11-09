@@ -1,0 +1,50 @@
+#include "pch.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int operation;
+	float numb1, numb2;
+	cout << "Обери операцію (0 - вихід, 1 - додавання, 2 - віднімання, 3 -множення, 4 - ділення)";
+	cin >> operation;
+
+	while (operation != 0)
+	{
+		if (operation < 0 || operation >= 5)
+		{
+			printf("Ви ввели неправильну операцію");
+			continue;
+
+		}
+
+		cout << "Введи перше число: ";
+		cin >> numb1;
+		cout << "Введи друге число: ";
+		cin >> numb2;
+
+		switch (operation)
+		{
+			case 1 :
+				printf("%f + %f = %f", numb1, numb2, numb1 + numb2);
+				break;
+			case 2:
+				printf("%f - %f = %f", numb1, numb2, numb1 - numb2);
+				break;
+			case 3:
+				printf("%f * %f = %f", numb1, numb2, numb1 * numb2);
+				break;
+			case 4:
+				printf("%f / %f = %f", numb1, numb2, numb1 / numb2);
+				break;
+			default:
+				printf("Ви ввели неправильну операцію");
+		}
+
+		cout << "Обери операцію (0 - вихід, 1 - додавання, 2 - віднімання, 3 -множення, 4 - ділення)";
+		cin >> operation;
+	}
+
+	return 0;
+}

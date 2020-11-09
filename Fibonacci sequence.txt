@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int
+main (void)
+{
+  long f, first, second, add;
+  cout << "Enter a value" << endl;
+  cin >> f;
+  first = 1;
+  second=0;
+  if (f>0){
+  cout << "1 ";
+  for (int i = 0; i !=(f-1) ; i++)
+    {
+      add=first+second;
+      second=first;
+      first=add;
+      cout << add<<" ";
+    }}
+}
